@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线购车-下单</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100..800;1,100..800&family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav style="background: #5A2D82; height: 8.33vh; display: flex; align-items: center; padding: 0 2rem;">
+            <div style="flex: 1;">
+                <img src="images/porsche-logo.svg" alt="Porsche Logo" style="height: 40px;">
+            </div>
+            <div style="display: flex; gap: 3rem; margin-left: auto;">
+                <a href="online-purchase.html" style="color: rgb(8, 0, 0); text-decoration: none; font-family: '黑体';">首页</a>
+                <a href="news-factory.html" style="color: rgb(19, 0, 0); text-decoration: none; font-family: '黑体';">在线购车</a>
+                <a href="register.html" style="color: rgb(4, 0, 0); text-decoration: none; font-family: '黑体';">注册登录</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="picture-area" style="
+        width: 50%;
+        margin: 0 auto;
+        padding: 1rem;">
+        <img src="images/4-purple.png" alt="" style="
+            width: 100%;
+            height: auto;
+            display: block;">
+    </div>
+
+    <div class="order" style="
+        background: #f0f0f0;
+        padding: 2rem;
+        border-radius: 8px;
+        text-align: right;
+        margin: 2rem 0;">
+        <h1 style="font-size: 2rem; margin-top: 2rem; text-align: center;">已选订单</h1>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+            <span style="font-weight: bold; font-size: 1.2rem;">车型</span>
+            <span style="font-size: 1.5rem;">Taycan4</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+            <span style="font-weight: bold; font-size: 1.2rem;">外观</span>
+            <span style="font-size: 1.5rem;">普罗旺斯紫</span>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+            <span style="font-weight: bold; font-size: 1.2rem;">内饰</span>
+            <span style="font-size: 1.5rem;">黑色部分真皮内饰</span>
+        </div>
+        
+    </div>
+
+    <div class="payment" style="
+        background: #f0f0f0;
+        padding: 2rem;
+        border-radius: 8px;
+        text-align: center;
+        margin: 2rem 0;">
+        <h1 style="font-size: 2rem; margin-bottom: 1.5rem;">购买信息</h1>
+        <div style="margin-bottom: 2rem; font-size: 1rem;">
+            <h2 style="font-size: 1.5rem; font-weight: bold;">已选订单</h2>
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <button class="btn-option" style="
+                    background: white;
+                    border: 2px solid #ddd;
+                    border-radius: 4px;
+                    padding: 8px 20px;
+                    font-weight: bold;
+                    cursor: pointer;">
+                    分期
+                </button>
+                <button class="btn-option" style="
+                    background: white;
+                    border: 2px solid #ddd;
+                    border-radius: 4px;
+                    padding: 8px 20px;
+                    font-weight: bold;
+                    cursor: pointer;">
+                    全额
+                </button>
+            </div>
+        </div>
+        <div style="margin-bottom: 2rem;">
+            <h2 style="font-size: 1.5rem; font-weight: bold;">置换服务</h2>
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <button class="btn-option" style="
+                    background: white;
+                    border: 2px solid #ddd;
+                    border-radius: 4px;
+                    padding: 8px 20px;
+                    font-weight: bold;
+                    cursor: pointer;">
+                    不需要
+                </button>
+                <button class="btn-option" style="
+                    background: white;
+                    border: 2px solid #ddd;
+                    border-radius: 4px;
+                    padding: 8px 20px;
+                    font-weight: bold;
+                    cursor: pointer;">
+                    需要
+                </button>
+            </div>
+        </div>
+        <h2>省市/经销商</h2>
+        <script src="./js/info.js"></script>
+        <select name="province" id="province" οnchange="getCity()">
+            <option value="">省份</option>
+             <!-- 利用js把省份添加到下拉列表里-->
+               <script type="text/javascript"> 
+                for(var i=0;i<provinceArr.length;i++)    
+                {
+                    document.write("<option value='"+i+"'>"+provinceArr[i]+"</option>");
+                    
+                }
+            </script>
+        </select>
+        <script>
+            //当省份的选择发生变化时调用 该方法   将市县加载到下拉选择框
+          function getCity()
+        {
+          //1.获取省份选择框的对象
+          var provincesobj=document.getElementById("province");
+          //2.获取市县选择框的对象
+          var cityobj=document.getElementById("city");
+          //3.获取被选择的省份的索引
+          var index=provincesobj.selectedIndex;
+          
+          //alert(provincesobj[index].value+","+provincesobj[index].text);
+          //4.通过省份的索引获取它的value值，value值也是它在数组的索引值
+          var value=provincesobj[index].value;;
+          
+          //5.获取对应省份的市县数组
+          var cityName=cityArr[value];
+          //6.将下拉框清楚索引为0之后的，只保留第一个
+          cityobj.length=1;
+          //通过循环遍历市县元素给下拉框赋值
+          for(var i=1;i<cityArr[value].length;i++)
+          {
+              cityobj.options[cityobj.options.length]=new Option(cityName[i],i);
+              
+          }
+          
+         }
+
+      //需要保时捷经销商的数据写下拉菜单
+   
+  </script>
+    </div>
+
+    <div class="information" style="
+        background: #f0f0f0;
+        padding: 2rem;
+        border-radius: 8px;
+        margin: 2rem 0;">
+        <h1 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1.5rem;">确认个人信息</h1>
+        <div style="font-size: 1.2rem;">
+            <input type="text" id="name" name="name" placeholder="姓名" required 
+                style="font-weight: bold; padding: 8px; width: 100%; margin-bottom: 1rem;">
+            <input type="text" id="number" name="number" placeholder="手机号" required 
+                style="font-weight: bold; padding: 8px; width: 100%; margin-bottom: 1rem;">
+            <label for="idType" style="font-weight: bold;">选择证件类型：</label>
+            <select id="idType" name="idType" style="
+                font-weight: bold;
+                padding: 8px;
+                width: 100%;
+                margin: 0.5rem 0 1rem;">
+        <option value="idCard">身份证</option>
+        <option value="passport">护照</option>
+        <option value="driverLicense">驾驶证</option>
+        <option value="militaryCard">军官证</option>
+        <option value="other">其他</option>
+    </select>
+        <input type="text" id="certificate" name="certificate" placeholder="证件号码" required 
+                style="font-weight: bold; padding: 8px; width: 100%;">
+        </div>
+    </div>
+
+    <div class="submit" style="
+        background: #f0f0f0;
+        padding: 2rem;
+        border-radius: 8px;
+        margin: 2rem auto;
+        width: 80%;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <img src="images/square.svg" alt="" style="width: 24px; height: 24px;">
+            <p style="font-size: 1.2rem; font-weight: bold;">我仔细阅读了并接受所附的 订购须知 和 隐私条款</p>
+        </div>
+        <div class="total-price" style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;">
+            <h2 style="font-size: 1.5rem; font-weight: bold;">总价</h2>
+            <div style="display: flex; align-items: center; gap: 2rem;">
+                <h2 style="font-size: 1.8rem; font-weight: bold;">¥ 1,038,000</h2>
+                <a href="#" class="btn-black" style="
+                    font-size: 1.2rem;
+                    padding: 12px 40px;
+                    text-decoration: none;">立即下单</a>
+            </div>
+        </div>
+    </div>

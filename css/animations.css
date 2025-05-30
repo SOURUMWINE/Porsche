@@ -1,0 +1,16 @@
+.progress-bar {
+    transition: width 0.3s ease-in-out;
+    height: 4px;
+    background: #007bff;
+}
+
+.progress-bar.complete {
+    background: #28a745;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}

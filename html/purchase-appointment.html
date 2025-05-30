@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线购车-预约试驾</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100..800;1,100..800&family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="form-validation.js"></script>
+</head>
+<body>
+    <header>
+        <nav style="background: #5A2D82; height: 8.33vh; display: flex; align-items: center; padding: 0 2rem;">
+            <div style="flex: 1;">
+                <img src="images/porsche-logo.svg" alt="Porsche Logo" style="height: 40px;">
+            </div>
+            <div style="display: flex; gap: 3rem; margin-left: auto;">
+                <a href="online-purchase.html" style="color: rgb(8, 0, 0); text-decoration: none; font-family: '黑体';">首页</a>
+                <a href="news-factory.html" style="color: rgb(19, 0, 0); text-decoration: none; font-family: '黑体';">在线购车</a>
+                <a href="register.html" style="color: rgb(4, 0, 0); text-decoration: none; font-family: '黑体';">注册登录</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <div style="display: flex; justify-content: space-between; margin: 1cm 1cm 0 1cm; gap: 2rem;">
+        <div class="left" style="
+            flex: 1;
+            max-width: calc(50% - 1rem);
+            background: #b0b0a8a4;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 4px;
+            margin-right: 1rem;">
+            <h1 style="color: #000000;">您的详细信息</h1>
+        <p><input type="text" id="name" name="name" placeholder="姓名" required 
+               style="width: 100%;
+                     padding: 8px;
+                     margin: 0.5rem 0;
+                     border: 1px solid #ddd;
+                     color: #666;"></p>
+        <p><input type="text" id="number" name="number" placeholder="手机号" required 
+               style="width: 100%;
+                     padding: 8px;
+                     margin: 0.5rem 0;
+                     border: 1px solid #ddd;
+                     color: #666;"></p>
+        <p><input type="text" id="call" name="call" placeholder="称呼" required 
+               style="width: 100%;
+                     padding: 8px;
+                     margin: 0.5rem 0;
+                     border: 1px solid #ddd;
+                     color: #666;"></p>
+
+        <p><input type="text" id="email" name="email" placeholder="电子邮箱" required 
+               style="width: 100%;
+                     padding: 8px;
+                     margin: 0.5rem 0;
+                     border: 1px solid #ddd;"></p>
+        <p><textarea id="message" name="message" rows="4" placeholder="您的信息" 
+                  style="width: 100%;
+                        padding: 8px;
+                        margin: 0.5rem 0;
+                        border: 1px solid #ddd;
+                        color: #666;
+                        font-family: inherit;"></textarea></p>
+    </select>
+    </div>
+
+    <div class="right" style="
+        flex: 1;
+        max-width: calc(50% - 1rem);
+        background: #b0b0a8a4;
+        padding: 2rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        border-radius: 4px;
+        margin-left: 1rem;">
+        <div class="car-type" style="margin-bottom: 2rem;">
+            <img src="images/4-purple.png" alt="" style="max-width: 50%; height: auto;">
+            <h1 style="color: #000000; margin: 0.5rem 0;">Taycan4</h1>
+            <h2 style="font-size: 16px; font-family: '黑体'; color: #000000; margin: 0.5rem 0;">价格 ￥1，098，000</h2>
+        </div>
+        <div class="place" style="line-height: 1.6;">
+            <h1 style="font-size: 1.2rem; margin: 0.5rem 0;">武汉光谷保时捷中心</h1>
+            <p style="margin: 0.25rem 0; font-family: '黑体'; font-size: 14px;">武汉市江夏区藏龙岛九凤街 1 号金鑫龙腾汽车园</p>
+            <p style="margin-bottom: 0.75rem; font-family: '黑体'; font-size: 14px;">430205 武汉</p>
+            <h1>开放时间</h1>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h2 style="font-size: 14px; font-family: '黑体';">星期一</h2>
+                <div>
+                    <p style="font-size: 14px; font-family: '黑体'; margin: 0;">09:00 - 12:00</p>
+                    <p style="font-size: 14px; font-family: '黑体'; margin: 0;">13:30 - 18:00</p>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h2 style="font-size: 14px; font-family: '黑体';">星期二</h2>
+                <div>
+                    <p style="font-size: 14px; font-family: '黑体'; margin: 0;">09:00 - 12:00</p>
+                    <p style="font-size: 14px; font-family: '黑体'; margin: 0;">13:30 - 17:00</p>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h2 style="font-size: 14px; font-family: '黑体';">星期三</h2>
+                <div>
+                    <p style="font-size: 14px; font-family: '黑体'; margin: 0;">09:00 - 12:00</p>
+                    <p style="font-size: 14px; font-family: '黑体'; margin: 0;">13:30 - 17:00</p>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h2 style="font-size: 14px; font-family: '黑体';">星期四</h2>
+                <div>
+                    <p style="font-size: 14px; font-family: '黑体'; margin: 0;">09:00 - 12:00</p>
+                    <p style="font-size: 14px; font-family: '黑体'; margin: 0;">13:30 - 17:00</p>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h2 style="font-size: 14px; font-family: '黑体';">星期五</h2>
+                <div>
+                    <p style="font-size: 14px; font-family: '黑体'; margin: 0;">09:00 - 12:00</p>
+                    <p style="font-size: 14px; font-family: '黑体'; margin: 0;">13:30 - 17:00</p>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h2 style="font-size: 14px; font-family: '黑体';">星期六</h2>
+                <div>
+                    <p style="font-size: 14px; font-family: '黑体'; margin: 0;">09:00 - 12:00</p>
+                    <p style="font-size: 14px; font-family: '黑体'; margin: 0;">13:30 - 17:00</p>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h2 style="font-size: 14px; font-family: '黑体';">星期日</h2>
+                <div>
+                    <p style="font-size: 14px; font-family: '黑体'; margin: 0;">09:00 - 12:00</p>
+                    <p style="font-size: 14px; font-family: '黑体'; margin: 0;">13:30 - 17:00</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <button style="
+                    background: #ffffff;
+                    color: #000000;
+                    border: 1px solid #000;
+                    padding: 12px 40px;
+                    font-family: '黑体';
+                    font-size: 16px;
+                    cursor: pointer;
+                    border-radius: 4px;"
+                    onclick="submitForm()">
+                    预约试驾
+                </button>
+            </div>
+    </div>
