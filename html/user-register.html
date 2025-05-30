@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script src="jquery-3.6.0.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登录</title>
@@ -18,9 +17,9 @@
                     <img src="images/porsche-logo.svg" alt="Porsche Logo" style="height: 40px;">
                 </div>
                 <div style="display: flex; gap: 3rem; margin-left: auto;">
-                    <a href="online-purchase.html" style="color: rgb(8, 0, 0); text-decoration: none; font-family: '黑体';">首页</a>
-                    <a href="news-factory.html" style="color: rgb(19, 0, 0); text-decoration: none; font-family: '黑体';">在线购车</a>
-                    <a href="register.html" style="color: rgb(4, 0, 0); text-decoration: none; font-family: '黑体';">注册登录</a>
+                    <a href="index.html" style="color: rgb(8, 0, 0); text-decoration: none; font-family: '黑体';">首页</a>
+                    <a href="news-woman.html" style="color: rgb(19, 0, 0); text-decoration: none; font-family: '黑体';">新闻资讯</a>
+                    <a href="purchase-type-4.html" style="color: rgb(19, 0, 0); text-decoration: none; font-family: '黑体';">在线购车</a>
                 </div>
             </nav>
         </header>
@@ -40,26 +39,25 @@
         text-align: left;
         background: rgba(255,255,255,0.9);">
         <h1>注册</h1>
-        <p>请输入您的手机号码</p>
-        <img src="images/Line 1.svg" alt="">
-        <p>请输入密码</p>
-        <img src="images/Line 1.svg" alt="">
-        <p>请确认密码</p>
-        <img src="images/Line 1.svg" alt="">
-        <p>用户名</p>
-        <img src="images/Line 1.svg" alt="">
-        <p><img src="images/square.svg" alt="">我已阅读并同意 一般条款和条件 使用条件。</p>
-        <p><img src="images/square.svg" alt="">我已阅读并同意 数据隐私声明。</p>
-        <p><img src="images/square.svg" alt="">我同意将我的数据转交给第三方。</p>
-        <a href="#"class="btn-black" 
-           style="display: inline-block;
-                  padding: 12px 24px;
-                  background: #ffffff;
-                  color: #000000 !important;
-                  border: 1px solid #ccc;
-                  border-radius: 4px;
-                  text-decoration: none;
-                  margin-top: 1rem;">注册</a>
-       
+        <form>
+            <p>请输入您的手机号码</p>
+            <input type="tel" name="phone" required style="width: 100%; padding: 8px; border: 1px solid #ccc;">
 
+            <p>请输入密码</p>
+            <input type="password" name="password" required style="width: 100%; padding: 8px; border: 1px solid #ccc;">
+
+            <p>请确认密码</p> 
+            <input type="password" name="confirm_password" required style="width: 100%; padding: 8px; border: 1px solid #ccc;">
+
+            <p>用户名</p>
+            <input type="text" name="username" required style="width: 100%; padding: 8px; border: 1px solid #ccc;">
+
+            <div style="margin: 1rem 0;">
+                <label><input type="checkbox" required> 我已阅读并同意一般条款和条件</label><br>
+                <label><input type="checkbox" required> 我已阅读并同意数据隐私声明</label><br>
+                <label><input type="checkbox"> 我同意将我的数据转交给第三方</label>
+            </div>
+
+            <button type="submit" class="btn-black">注册</button>
+        </form>
     </div>

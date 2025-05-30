@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>保时捷官网</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 新增背景和图层样式 */
+        body {
+            background: url('images/frontpage.png') no-repeat center center/cover;
+            position: relative;
+            min-height: 200vh;
+            z-index: 0;  /* 新增层级基准 */
+        }
+        
+        .main-logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2.5%;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+        
+        .gts-image {
+            position: absolute;
+            top: calc(50% + 10vh);
+            left: 50%;
+            width: 25%;
+            height: 25vh;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        
+        .detail-link {
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: '黑体', sans-serif;
+            font-size: 1.8rem;
+            text-decoration: none;
+            z-index: 3;
+        }
+    </style>
+</head>
+    <body>
+        <header>
+            <nav style="background: #5A2D82; height: 8.33vh; display: flex; align-items: center; padding: 0 2rem;">
+                <div style="flex: 1;">
+                    <img src="images/porsche-logo.svg" alt="Porsche Logo" style="height: 40px;">
+                </div>
+                <div style="display: flex; gap: 3rem; margin-left: auto;">
+                    <a href="purchase-type-4.html" style="color: rgb(8, 0, 0); text-decoration: none; font-family: '黑体';">在线购车</a>
+                    <a href="news-woman.html" style="color: rgb(19, 0, 0); text-decoration: none; font-family: '黑体';">新闻资讯</a>
+                    <a href="user-log-in.html" style="color: rgb(4, 0, 0); text-decoration: none; font-family: '黑体';">注册登录</a>
+                </div>
+            </nav>
+        </header>
+
+    <!-- 实时时钟显示区域 -->
+    <div id="clock"></div>
+
+    </div>
+    <!-- 新增图层元素 -->
+    <div class="detail-text">
+        <!-- 新增图像和文字 -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">        <style>
+            /* 调整图层定位 */
+            .main-logo {
+                top: 45%;
+                width: 2.5vw;
+                height: 2.5vh;
+            }
+            
+            .gts-image {
+                top: calc(50% + 5vh);
+                width: 25vw;
+                height: 25vh;
+            }
+            
+            /* 文字排列优化 */
+            .detail-link {
+                display: flex;
+                justify-content: center;
+                top: calc(50% + 30vh);
+                white-space: nowrap;
+                font-family: 'SimHei', '黑体', sans-serif;
+                text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            }
+        </style>
+
+        <style>
+            /* 调整logo尺寸 */
+            .main-logo {
+                top: 50%;
+                width: 12.5vw;  /* 原尺寸2.5vw ×5 */
+                height: 12.5vh; /* 原尺寸2.5vh ×5 */
+            }
+
+            /* 新增箭头样式 */
+            .detail-arrow {
+                position: absolute;
+                top: calc(50% + 35vh);
+                left: 50%;
+                transform: translateX(-50%);
+                width: 3rem;
+                height: 3rem;
+                filter: invert(1);
+                z-index: 3;  /* 从2调整为3 */
+            }
+        </style>
+
+        <!-- 调整后的元素结构 -->
+        <img src="images/taycan-logo.png" class="main-logo" alt="Taycan Logo">
+        <img src="images/gts-purple.png" class="gts-image" alt="GTS Purple">
+        <a href="#" class="detail-link" style="color: #0a0000;">了 解 详 情
+            <img src="images/arrow-down-circle.svg" class="detail-arrow" alt="向下箭头">
+        </a>
+    </div>
+</body>
+</html>

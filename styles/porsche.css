@@ -1,0 +1,24 @@
+/* 悬浮缩放动画 */
+.scale-hover {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform; /* 优化动画性能 */
+}
+
+@media (hover: hover) {
+  .scale-hover:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+}
+
+/* 移动端触控反馈 */
+@media (max-width: 768px) {
+  .scale-hover {
+    transform: scale(0.98);
+    transition: transform 0.2s ease;
+  }
+  
+  .scale-hover:active {
+    transform: scale(1);
+  }
+}
